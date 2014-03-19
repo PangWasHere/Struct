@@ -1,0 +1,52 @@
+<html>
+<head>
+	<link rel='stylesheet' href='css/main_style.css' />
+	<link rel='stylesheet' href='css/jquery-ui.min.css' />
+	<script src="js/jquery.min.js"></script>
+	<script src='js/jquery-ui.min.js'></script>
+	<script src="js/main_script.js"></script>
+</head>
+<body style="">
+	<script>
+		function alert_me(p){
+	console.log(p);
+}
+	</script>
+	<!--div id="worldMenu">
+			<a class='worldMenuBtn'><img src='css/imgs/about-button.png'/></a>
+			<a class='worldMenuBtn script_worldBldgs' id="worldMenuExam"><img src='css/imgs/coding-button.png'/></a>
+	</div-->
+	<div id="userMenu">
+		
+		<div class='script_settingsBubbles' id='settings_bubbles'>
+			<div class='mask_tip' id='settings_bubblesTip'></div>
+			<p class='settingsOption script_viewStatistics'>My Statistics</p>
+				<span id="script_viewStatisticsTarget"></span>
+			<p class='settingsOption script_changePass'>Change password</p>
+				<form id="changePasswordForm">
+					<input type='password' placeholder='Old Password' name='old' id="oldPassword"/>
+					<input type='password' placeholder='New Password' name='new' id="confirmPassA"/>
+					<input type='password' placeholder='Confirm Pass' id="confirmPassB" />
+					<input type='submit' value='Change Password'/>
+				</form>
+			<p class='settingsOption script_logout'>Logout</p>
+		</div>
+		<img src='css/imgs/btn-gear.png' id='btn_settings'/>
+	</div>
+	<div id="mainActivity" class="activity">
+		<div id="loadingMsg" class="center"><img src='css/imgs/ajax-loader.gif'/></div>
+		<div id="optionPane" class="isClosed">
+			<label id="optionPaneClose">x</label>
+			<div id="optionPaneBanner"></div>
+			<div id="optionPaneSelection">
+			</div>
+		</div>
+		<div id="world" class="center"></div>
+	</div>
+	<div id="subActivity" class="activity">
+		<p style="text-align: center;">If you don't see anything, please wait for it to load.</p>
+		<div id="subActivityReturnBtn">&laquo;</div>
+		<span id="activityModule" class="center"></span>
+	</div>
+</body>
+</html>

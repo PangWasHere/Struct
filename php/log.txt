@@ -1,0 +1,6 @@
+FAILED @  INSERT INTO puzzle_report VALUES(2,1,NOW(),'superior',"<level>1</level>")Array
+(
+    [meta] => <level>1</level>
+    [puzzle_ID] => 2
+    [score] => superior
+)

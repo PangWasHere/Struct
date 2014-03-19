@@ -1,0 +1,314 @@
+body{
+	margin:0;
+	padding:0;
+	overflow:hidden;
+	font-family:verdana;
+}
+
+img, body, .worldBubbles{
+	user-drag: none; -moz-user-select: none; -webkit-user-drag: none;
+	-moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+#world{
+	width:731px;
+	height:657px;
+	background-image: url( imgs/World.png );
+	background-position: center center;
+	background-size: 100% 100%;
+	margin-top:70px;
+	opacity:0;
+	z-index:2;
+}
+
+.center{
+	position:relative;
+	left:0;
+	top:0;
+	right:0;
+	bottom:0;
+	margin:auto;
+}
+
+#userMenu{
+	z-index:101;
+	right: 1em;
+}
+
+#userMenu #btn_settings{
+	width:1.5em;
+	cursor:pointer;
+	vertical-align:middle;
+	margin-left:0.3em;
+	transform:rotate(0deg);
+	-ms-transform:rotate(0deg); /* IE 9 */
+	-webkit-transform:rotate(0deg); /* Opera, Chrome, and Safari */
+	transition: all 0.5s;
+}
+
+
+#userMenu #btn_settings:active{
+	transform:rotate(90deg);
+	-ms-transform:rotate(90deg); /* IE 9 */
+	-webkit-transform:rotate(90deg); /* Opera, Chrome, and Safari */
+}
+
+#loadingMsg{
+	width:120px;
+	z-index:1;
+	height:1.4em;
+}
+
+#worldMenu, #userMenu{
+	position:fixed;
+	z-index:10;
+	padding:1em;
+}
+
+#worldMenu .worldMenuBtn{
+	opacity:0;
+	margin-left:-0.5em;
+}
+
+
+#worldMenu img{
+	width:45px;
+	transition:all 0.5s;
+	border: 3px solid rgba(218,165,32,0);
+	-webkit-border-radius:999em;
+	border-radius:999em;
+}
+
+#worldMenu img:hover{
+	border: 3px solid rgba(218,165,32,1);
+}
+
+.worldBubbles{
+	font-family: Calibri;
+	color:white;
+	width:64px;
+	padding:8px;
+	height:98px;
+	opacity:0;
+	cursor:pointer;
+	padding-top:1.3em;
+	text-align:center;
+	overflow:hidden;
+	display:block;
+	background:#000;
+	position:absolute;
+
+	transition: margin 1s;
+	z-index:100;
+}
+
+#userMenu #settings_bubblesTip,
+#userMenu #settings_bubbles{
+	width:212px;
+	background:#d7e8a4;
+	overflow-x:hidden;
+}
+
+#userMenu #settings_bubbles{
+	border-radius:0.5em;
+	-webkit-border-radius:1em;
+	position:absolute;
+	z-index:105;
+	margin: 1.3em 0 0 0;
+	padding: 0.3em 0;
+	cursor:pointer;
+	display:none;
+	text-align:center;
+	right:10px;
+}
+
+#userMenu #settings_bubblesTip{
+	position: absolute;
+	height: 26px;
+	top: -1.3em;
+	margin: 0;
+}
+#userMenu #script_viewStatisticsTarget{
+	padding:1em;
+}
+
+#userMenu #changePasswordForm, #userMenu #script_viewStatisticsTarget{
+	margin:0;
+	display:none;
+}
+
+#userMenu #changePasswordForm input{
+	padding:0.4em;
+	border:0;
+}
+
+#userMenu #changePasswordForm input[type='submit']{
+	background:#EEE;
+	cursor:pointer;
+}
+
+#userMenu #changePasswordForm .wrong_value{
+background-image: url(imgs/input_wrong.png);
+background-repeat: no-repeat;
+background-position: 95%;
+}
+
+
+#userMenu #settings_bubbles .settingsOption{
+	transition: background 0.2s;
+	padding:0.5em;
+	margin:0;
+}
+
+#userMenu #settings_bubbles .settingsOption:hover{
+	background: white;
+}
+
+#userMenu #changePasswordForm{
+	
+}
+
+.mask_callout{	
+	mask: url(imgs/mask_callout.png); 
+	-webkit-mask: url(imgs/mask_callout.png) no-repeat;
+	}
+.mask_circle{	
+	mask: url(imgs/mask_circle.png); 
+	-webkit-mask: url(imgs/mask_circle.png) no-repeat;
+	}
+	
+.mask_tip{	
+	mask: url(imgs/mask_tip.png); 
+	-webkit-mask: url(imgs/mask_tip.png) no-repeat;
+	}
+
+.worldBldgs{
+	z-index:99;
+	position:absolute;
+	cursor:pointer;
+}
+
+#optionPane{
+	width:31%;
+	min-width:300px;
+	height:80%;
+	position:fixed;
+	right:-34%;
+	border: thin double;
+	z-index:9;
+	transition:background 1s;
+	top:1em;
+	box-shadow: 0 0 7px 1px rgba(0,0,0,0.7);
+	border-radius:4px;
+	bottom:0;
+	margin:auto;
+	text-align:center;
+	background: #EEE;
+	padding:1em;
+}
+
+
+#optionPane #optionPaneBanner{
+	width: 100%;
+	height: 24%;
+	clear:both;
+}
+
+#optionPane #optionPaneSelection{
+	width: 100%;
+	height: 72%;
+	margin-top:4%;
+	text-align:left;
+	background:#CCC;
+}
+
+#optionPane #optionPaneClose{
+	z-index:101;
+	position: absolute;
+	right: 0.4em;
+	top: 0.4em;
+	font-weight: 900;
+	background: #EEE;
+	cursor: pointer;
+	padding: 0.7em;
+	line-height: 0.8em;
+	border-radius: 0.6em;
+}
+
+#optionPane .optionPaneOption{
+	background: #CCC;
+	color: #333;
+	margin:0;
+	padding:1em;
+	cursor:pointer;
+	transition: padding 1s;
+	text-shadow: 0px 1px 1px #EEE; 
+}
+
+#optionPame #optionPaneClose{
+}
+
+#optionPane .optionPaneOption:hover{
+	background: #EEEEEE;
+	font-weight: bold;
+	color:black;
+	padding-left: 2em;
+}
+
+.activity{
+	width:100%;
+	height:100%;
+	position:absolute;
+}
+
+#mainActivity{
+	
+}
+
+#subActivity{
+	left: 100%;
+}
+
+#subActivity #subActivityReturnBtn{
+	background: #EEE;
+	font-size: xx-large;
+	padding: 100% 0.5em 100% 0.5em;
+	position: absolute;
+	top: 0;
+	z-index:9;
+	display: inline-block;
+	margin: auto;
+	bottom: 0;
+	line-height: 0;
+	height: 0;
+	cursor: pointer;
+	transition:  padding 1s, opacity 0.3s;
+	background: -moz-linear-gradient(left,  rgba(238,238,238,1) 0%, rgba(247,247,247,1) 53%, rgba(255,255,255,0) 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(238,238,238,1)), color-stop(53%,rgba(247,247,247,1)), color-stop(100%,rgba(255,255,255,0)));
+	background: -webkit-linear-gradient(left,  rgba(238,238,238,1) 0%,rgba(247,247,247,1) 53%,rgba(255,255,255,0) 100%);
+	background: -o-linear-gradient(left,  rgba(238,238,238,1) 0%,rgba(247,247,247,1) 53%,rgba(255,255,255,0) 100%);
+	background: -ms-linear-gradient(left,  rgba(238,238,238,1) 0%,rgba(247,247,247,1) 53%,rgba(255,255,255,0) 100%);
+	background: linear-gradient(to right,  rgba(238,238,238,1) 0%,rgba(247,247,247,1) 53%,rgba(255,255,255,0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#00ffffff',GradientType=1 );
+}
+
+#subActivity #subActivityReturnBtn:hover{
+	padding-left:0.2em;
+}
+
+
+#activityModule{
+	width: 100%;
+	display:inline-block;
+	height: 100%;
+	display:none;
+}
+
+
+
+.inset{
+	text-shadow: 0px 1px 1px #EEE; 
+}

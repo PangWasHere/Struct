@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<world>
+	<!-- How to
+		NODE LVL 1
+		<building> creates a building and it's corresponding pop up in the world
+			Properties
+			name	'Name to be displayed in the bubble'
+			src		'Img path of the building FROM the ROOT'
+			bubbleX	'X coordinate of the bubble. 0 if not supplied'
+			bubbleY	'Y coordinate of the bubble.0 if not supplied'
+			x		'x coordinate of the building'
+			y		'y coordinate of the building'
+			bubbleColor
+		
+		NODE LVLS 2-N
+		<option> creates the options that appear in the side menu
+		
+		LEAVES
+		<swf> Opens an external link </swf>
+			Properties
+			src		'path to the swf FROM the ROOT'
+		<html> Opens an external html </html>
+		<script> Runs an external script </script>
+	-->
+
+	<building name="Science Dome" src="css/imgs/bldg-science.png"  bubbleType="callout" bubbleX="100" bubbleY="50" x="55" y="163" bubbleColor="darkgreen" bannerSrc="css/imgs/bldg-science-banner.jpg">
+		<option name="Go to Chem Lab" src="css/imgs/bldg-science-chemlab.png"  bannerSrc="css/imgs/bldg-science-chemlab.png">
+			<option name="Sub Option 1" src="css/imgs/bldg-science-suboption">
+				<option name="Sub Sub Option 1" src="css/imgs/bldg-science-suboption"></option>
+			</option>
+			<option name="Sub Option 2" src="css/imgs/bldg-science-suboption"></option>
+		</option>
+		<option name="Go to the Garden" src="css/imgs/bldg-science-garden.png">
+			
+		</option>
+	</building>
+	
+
+	<building name="Muggle Library" src="css/imgs/bldg-library.png"  bubbleType="callout" bubbleX="456" bubbleY="-70" x="387" y="13" bubbleColor="darkred" bannerSrc="css/imgs/bldg-library-banner.jpg">
+		<option name="Collect Books (Part-Time Job)" activityType="swf" src="swf/book_collector/BookCollector.swf">
+		</option>
+	</building>
+		
+	<building name="Godheart Canteen" src="css/imgs/bldg-canteen.png"  bubbleType="callout" bubbleX="580" bubbleY="70" x="502" y="186" bubbleColor="#007bff">
+		
+	</building>
+	
+	<building name="Dormitory A" src="css/imgs/bldg-dorm.png" bubbleType="circle" bubbleX="275" bubbleY="396" x="110" y="303" bubbleColor="#009F9F" bannerSrc="css/imgs/bldg-dorm-banner.jpg">
+		<option name="Visit Students" activityType="iframe" src="swf/book_collector/BookCollector.swf">
+		</option>
+	</building>
+</world>

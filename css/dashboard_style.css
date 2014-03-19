@@ -1,0 +1,179 @@
+body{
+	margin:0;
+	padding:0;
+	padding:1em;
+	background-image: url("imgs/chalkboard_struct.png");
+	background-position: 1em 0.5em;
+	background-size: 0%;
+	background-repeat: no-repeat;
+	overflow:hidden;
+}
+
+.contentPane{
+	position:relative;
+	font-family: 'Verdana';
+	font-size:90%;
+	word-break:break-word;
+	font-weight:bold;
+	text-shadow: 0px 1px 1px #EEE; 
+	color: #777; 
+	float:left;
+	width: 19%;
+	margin-top:6em;
+	height: calc(100% - 7em);
+	background:#DDD;
+	padding-top:0.5em;
+	overflow:auto;
+	margin-right:1%;
+}
+
+.contentPane:last-of-type{
+	width:39%;
+}
+
+.contentPane.isClosed{
+	margin-left:-4%;
+	opacity:0;
+}
+
+.contentPaneBtn{
+	padding:0.5em;
+	background: #EEE;
+border: thin solid gray;
+}
+
+.contentPane.isOpen{
+	/*margin-left:0;
+	opacity:1;*/
+}
+
+.contentPane .contentPaneLink{
+	transition: all 0.5s;
+	cursor:pointer;
+	text-shadow: 0px 1px 1px #EEE; 
+	background: rgba(255,255,255,0);
+	padding:0.5em;
+	margin:0;
+}
+
+.sliderBtn{
+	border-top-right-radius:0.5em;
+	border-bottom-right-radius:0.5em;
+}
+
+.contentPane .contentPanelDead{
+	text-shadow: 0px 1px 1px #EEE; 
+	padding:0.5em;
+	margin:0;
+}
+
+.contentPane .contentPaneLink:hover{
+	background: rgba(255,255,255,1);
+	cursor:pointer;
+	text-shadow: 0px 1px 1px #EEE;
+	
+}
+
+.contentPane .menuItem{
+	font-size:20px;
+	opacity:0;
+}
+
+.contentPane .contentPaneTitle{
+	margin-top:-2em;
+	font-size:1.5em;
+}
+
+.isTransitioningIn{
+	opacity:0;
+}
+
+.contentPanelDead.majorContent{
+	padding:padding: 0.5em 135px 0.5em 0.5em !important;
+}
+
+img.student_img{
+	position: absolute;
+	right: 0;
+	top: 0;
+	margin: 1em;
+	width: 120px;
+}
+
+.scrollDiv{
+	height: 125px;
+	overflow: auto;
+	margin: 0 2%;
+	background: white;
+	border: 2px inset;
+}
+
+.scrollDiv table{
+	width:100%;
+}
+
+.scrollDiv td{
+	padding: 0.3em;
+}
+
+.scrollDiv tr:nth-child(1){
+	font-weight:bold;
+}
+
+
+.scrollDiv tr:nth-child(even){
+	background: #DDD;
+}
+
+.data_3pane_target{
+	width:59% !important;
+}
+
+.data_2pane_target{
+	width:39% !important;
+}
+
+[contentEditable='true']{
+	 outline: auto 5px -webkit-focus-ring-color
+}
+
+.unveilNewConceptTarget, .unveilNewClassTarget, .unveilNewStudentTarget, .unveilNewClassRegistree{
+overflow: hidden;
+display: inline-block;
+width: 0;
+vertical-align: middle;
+}
+
+[disabled]{
+	border:0;
+	background:0;
+	color:black;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+}
+
+#popupmodule{
+	width: 50%;
+		height: 50%;
+		position: absolute;
+		background: #EEE;
+		min-width: 400px;
+		min-height: 400px;
+		left: 0;
+		right: 0;
+		display:none;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		padding:1em;
+}
+
+#popupclose{
+	text-align:right; margin:0; font-size:x-large;
+}
+#popupcontent{
+	overflow:scroll;
+}
+#popupcontent td{
+	padding:1em;
+}
